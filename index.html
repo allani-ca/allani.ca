@@ -1,1 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Lani</title>
+  <meta name="description" content="Lani - network operations, computers, games, and the internet.">
+  <meta name="theme-color" content="#f6f5f1">
+
+  <style>
+    :root {
+      --background: #f6f5f1;
+      --foreground: #202020;
+      --muted: #77736d;
+      --rule: #d8d5cf;
+      --link: #315f8c;
+      --link-hover: #163d64;
+      --code-bg: #ebe9e3;
+      --max-width: 720px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #181817;
+        --foreground: #e7e5df;
+        --muted: #9a9891;
+        --rule: #3a3935;
+        --link: #8bb9e5;
+        --link-hover: #b7d7f2;
+        --code-bg: #252522;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--background);
+      color: var(--foreground);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+      line-height: 1.65;
+    }
+
+    main {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 72px 0 48px;
+    }
+
+    header {
+      margin-bottom: 64px;
+    }
+
+    .name {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+    }
+
+    .pronouns {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .intro {
+      max-width: 570px;
+      margin: 24px 0 0;
+      font-size: 1.05rem;
+    }
+
+    .intro a,
+    footer a {
+      color: var(--link);
+    }
+
+    section {
+      margin-top: 56px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+
+    .section-heading::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: var(--rule);
+      transform: translateY(-2px);
+    }
+
+    .links {
+      border-top: 1px solid var(--rule);
+    }
+
+    .link-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(120px, 1fr);
+      gap: 24px;
+      align-items: baseline;
+      min-height: 48px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .link-name {
+      font-weight: 500;
+    }
+
+    .link-value {
+      color: var(--muted);
+      text-align: right;
+      overflow-wrap: anywhere;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition:
+        color 120ms ease,
+        text-decoration-thickness 120ms ease;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--link-hover);
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: 4px;
+    }
+
+    .external {
+      margin-left: 5px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.8em;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 20px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    footer p {
+      margin: 4px 0;
+    }
+
+    .location {
+      color: var(--muted);
+    }
+
+    @media (max-width: 560px) {
+      main {
+        width: min(var(--max-width), calc(100% - 28px));
+        padding-top: 44px;
+      }
+
+      header {
+        margin-bottom: 48px;
+      }
+
+      .link-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 10px 0;
+      }
+
+      .link-value {
+        text-align: left;
+        font-size: 0.9rem;
+      }
+
+      section {
+        margin-top: 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<main>
+
+  <header>
+    <h1 class="name">Lani</h1>
+
+    <div class="pronouns">
+      she/her · <span class="location">Toronto, Ontario</span>
+    </div>
+
+    <p class="intro">
+      Network operations, computers, games, and generally being online.
+      This is my little corner of the internet.
+    </p>
+  </header>
+
+
+  <section id="online">
+    <h2 class="section-heading">online</h2>
+
+    <div class="links">
+
+      <div class="link-row">
+        <div class="link-name">Bluesky</div>
+        <div class="link-value">
+          <a href="https://bsky.app/profile/allani.ca" rel="me">allani.ca</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Facebook</div>
+        <div class="link-value">
+          <a href="https://www.facebook.com/profile.php?id=61583874608893">61583874608893</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Instagram</div>
+        <div class="link-value">
+          <a href="https://www.instagram.com/allani.ca">@allani.ca</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Reddit</div>
+        <div class="link-value">
+          <a href="https://www.reddit.com/user/Allani_ca">u/Allani_ca</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Snapchat</div>
+        <div class="link-value">
+          <a href="https://www.snapchat.com/add/allani.ca">allani.ca</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">TikTok</div>
+        <div class="link-value">
+          <a href="https://tiktok.com/@allani.ca">allani.ca</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Threads</div>
+        <div class="link-value">
+          <a href="https://www.threads.net/@allani.ca">allani.ca</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">X</div>
+        <div class="link-value">
+          <a href="https://x.com/Allani_ca">@Allani_ca</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">YouTube</div>
+        <div class="link-value">
+          <a href="https://www.youtube.com/@allani_ca">@allani_ca</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="listen">
+    <h2 class="section-heading">listen</h2>
+
+    <div class="links">
+
+      <div class="link-row">
+        <div class="link-name">SoundCloud</div>
+        <div class="link-value">
+          <a href="https://soundcloud.com/lani-712913341">lani-712913341</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Spotify</div>
+        <div class="link-value">
+          <a href="https://open.spotify.com/user/31lvtlpnyjbvmjzuudtydayj7r7e">31lvtlpnyjbvmjzuudtydayj7r7e</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="gaming">
+    <h2 class="section-heading">games</h2>
+
+    <div class="links">
+
+      <div class="link-row">
+        <div class="link-name">Twitch</div>
+        <div class="link-value">
+          <a href="https://twitch.tv/allanica">allanica</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Steam</div>
+        <div class="link-value">
+          <a href="https://steamcommunity.com/id/allanica">allanica</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Battle.net</div>
+        <div class="link-value">Allani#11987</div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Crunchyroll</div>
+        <div class="link-value">allani_ca</div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Epic Games</div>
+        <div class="link-value">Allani.ca</div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">League of Legends</div>
+        <div class="link-value">allanica#neat</div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Riot Games</div>
+        <div class="link-value">allanica#neat</div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">PlayStation</div>
+        <div class="link-value">allani_ca</div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Roblox</div>
+        <div class="link-value">allani_ca</div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Xbox</div>
+        <div class="link-value">Allani88</div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Minecraft</div>
+        <div class="link-value">
+          <a href="https://namemc.com/profile/Allani88.1">Allani88</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+      <div class="link-row">
+        <div class="link-name">Pokémon GO</div>
+        <div class="link-value">
+          <a href="https://pokemon-go.onelink.me/nBRb?af_dp=pokemongo://&deep_link_value=dl_action%3DAddFriend%2CDlId%3D928408046916">
+            9284 0804 6916
+          </a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="code">
+    <h2 class="section-heading">code</h2>
+
+    <div class="links">
+
+      <div class="link-row">
+        <div class="link-name">GitHub</div>
+        <div class="link-value">
+          <a href="https://github.com/allani-ca">allani-ca</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="website">
+    <h2 class="section-heading">elsewhere</h2>
+
+    <div class="links">
+
+      <div class="link-row">
+        <div class="link-name">Website</div>
+        <div class="link-value">
+          <a href="https://allani.ca">allani.ca</a>
+          <span class="external">↗</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>
+    <p>© 2026 Lani</p>
+    <p>
+      <a href="https://allani.ca">allani.ca</a>
+    </p>
+  </footer>
+
+</main>
+
+</body>
+</html>
